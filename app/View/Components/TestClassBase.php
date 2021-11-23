@@ -6,14 +6,17 @@ use Illuminate\View\Component;
 
 class TestClassBase extends Component
 {
+    public $classBaseMessage;
+    public $defaultMessage;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($classBaseMessage, $defaultMessage="テスト")
     {
-        //
+        $this->classBaseMessage = $classBaseMessage;
+        $this->defaultMessage = $defaultMessage;
     }
 
     /**
